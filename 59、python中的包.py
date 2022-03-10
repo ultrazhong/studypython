@@ -21,6 +21,9 @@ logging 提供了灵活的记录时间、错误、警告和调试信息的日志
 """
 
 import time
+import urllib.request
+import math
 print(time.time())
 print(time.localtime())
-
+print(urllib.request.urlopen('https://www.baidu.com').read())
+print(math.pi)
