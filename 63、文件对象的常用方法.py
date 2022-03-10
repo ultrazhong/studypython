@@ -16,13 +16,19 @@ tell()          返回文件指针的当前位置
 flush()         把缓冲区的内容写入文件，但不关闭文件
 close()         把缓冲区内容写入文件，同时关闭文件
 """
-file=open('1.txt','r')
+
+file = open('1.txt', 'r')
 # print(file.read(2))
 # print(file.readline())
 print(file.readlines())
 
-file=open('1.txt','a')
+file = open('1.txt', 'a')
 file.write(' python')
-lst=['hello','java','hello']
+lst = ['hello', 'java', 'hello']
 file.writelines(lst)
+file.close()
+
+file = open('1.txt', 'r')
+file.seek(20)
+print(file.read(),file.tell())
 file.close()
